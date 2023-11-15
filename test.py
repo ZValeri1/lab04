@@ -6,13 +6,20 @@ lists = [
     [3, 4, 5, 6, 7],
     [5, 6, 7, 8, 9]
 ]
+lists1 = [
+    [10, 2, 30, 4, 135, 15],
+    [3, 40, 5, 6, 7, 15],
+    [135, 6, 27, 8, 40, 15]
+]
+lists2 = [
+    [1, 2, 3],
+    [3, 4, 5],
+    [5, 6, 7]
+]
 
 # Вызываем функцию count_same_elements с тестовыми данными
-result = count_same_elements(*lists)
+assert count_same_elements(*lists) == 5
 
-# Проверяем результат
-expected_result = 5
-if result == expected_result:
-    print("Тест пройден 🎉")
-else:
-    print("Тест не пройден ❌")
+assert count_same_elements(*lists1) == 4
+
+assert count_same_elements(*lists2) == 2
